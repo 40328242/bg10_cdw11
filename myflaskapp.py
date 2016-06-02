@@ -53,6 +53,7 @@ import init
 #import users.b.g101.b40123200
 #bg10
 import users.b.g10.bg10_40328242
+import users.b.g10.bg10_40323241
 #ag8
 #import users.a.g8.a40323143
 #import users.a.g8.a40323154
@@ -477,6 +478,7 @@ if __name__ == "__main__":
 #app.register_blueprint(users.b.g101.b40123200.bg101)
 #bg10
 app.register_blueprint(users.b.g10.bg10_40328242.bg10_40328242)
+app.register_blueprint(users.b.g10.bg10_40323241.bg10_40323241)
 #ag8
 #app.register_blueprint(users.a.g8.a40323143.ag8_40323143)
 #app.register_blueprint(users.a.g8.a40323154.ag8_40323154)
