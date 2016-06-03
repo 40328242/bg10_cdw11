@@ -756,7 +756,7 @@ s.line(0, 0, 100, 100).attr({ 'fill': "silver", 'stroke': "black", 'strokeWidth'
 </html>
 '''
     return outstring
-@bg10_40328242.route('/threegears', defaults={'n1':15,'n2':20,'n3':18})
+@bg10_40328242.route('/threegears', defaults={'n1':17,'n2':29,'n3':15})
 @bg10_40328242.route('/threegears/<n1>/<n2>/<n3>')
 def draw_threegears(n1, n2, n3):
     outstring='''
