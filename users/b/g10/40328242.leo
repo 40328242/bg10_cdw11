@@ -28,7 +28,7 @@
 </v>
 </v>
 </v>
-<v t="amd.20160501215545.1" a="E"><vh>wsgi 程式部份</vh>
+<v t="amd.20160501215545.1"><vh>wsgi 程式部份</vh>
 <v t="leo.20160519092132.1" a="E"><vh>@clean bg10_40328242.py</vh>
 <v t="leo.20160519092752.1"><vh>bg10_40328242 declarations</vh></v>
 <v t="leo.20160519092752.2"><vh>a</vh></v>
@@ -62,7 +62,7 @@
 <v t="leo.20160526112129.1"><vh>threegears</vh></v>
 </v>
 </v>
-<v t="amd.20160501221015.1" a="E"><vh>@path ./../../../</vh>
+<v t="amd.20160501221015.1"><vh>@path ./../../../</vh>
 <v t="amd.20160501221001.1" a="E"><vh>@clean myflaskapp.py</vh>
 <v t="amd.20160501221001.2"><vh>myflaskapp declarations</vh></v>
 <v t="amd.20160501221001.3"><vh>index</vh></v>
@@ -181,6 +181,7 @@ if __name__ == "__main__":
 #bg101
 #app.register_blueprint(users.b.g101.b40123200.bg101)
 #bg10
+app.register_blueprint(users.b.g10.bg10_40328242.bg10_40328245)
 app.register_blueprint(users.b.g10.bg10_40328242.bg10_40328242)
 app.register_blueprint(users.b.g10.bg10_40323241.bg10_40323241)
 app.register_blueprint(users.b.g10.bg10_40323222.bg10_40323222)
@@ -376,6 +377,7 @@ import init
 #bg101
 #import users.b.g101.b40123200
 #bg10
+import users.b.g10.bg10_40328245
 import users.b.g10.bg10_40328242
 import users.b.g10.bg10_40323241
 import users.b.g10.bg10_40323222
