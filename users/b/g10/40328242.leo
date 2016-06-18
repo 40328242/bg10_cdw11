@@ -23,12 +23,13 @@
 <v t="amd.20160501215942.1" a="E"><vh>@path content/b/g10</vh>
 <v t="amd.20160501215720.1"><vh>@edit 40328242-eighteenthirty.md</vh></v>
 <v t="leo.20160612202832.1"><vh>@edit 40328242-threegears.md</vh></v>
+<v t="leo.20160618122510.1"><vh>@edit 40328242-3Dgears.md</vh></v>
 <v t="leo.20160612202836.1"><vh>@edit 40328242-cdw11.md</vh></v>
 </v>
 </v>
 </v>
 </v>
-<v t="amd.20160501215545.1"><vh>wsgi 程式部份</vh>
+<v t="amd.20160501215545.1" a="E"><vh>wsgi 程式部份</vh>
 <v t="leo.20160519092132.1" a="E"><vh>@clean bg10_40328242.py</vh>
 <v t="leo.20160519092752.1"><vh>bg10_40328242 declarations</vh></v>
 <v t="leo.20160519092752.2"><vh>a</vh></v>
@@ -62,7 +63,7 @@
 <v t="leo.20160526112129.1"><vh>threegears</vh></v>
 </v>
 </v>
-<v t="amd.20160501221015.1"><vh>@path ./../../../</vh>
+<v t="amd.20160501221015.1" a="E"><vh>@path ./../../../</vh>
 <v t="amd.20160501221001.1" a="E"><vh>@clean myflaskapp.py</vh>
 <v t="amd.20160501221001.2"><vh>myflaskapp declarations</vh></v>
 <v t="amd.20160501221001.3"><vh>index</vh></v>
@@ -181,7 +182,7 @@ if __name__ == "__main__":
 #bg101
 #app.register_blueprint(users.b.g101.b40123200.bg101)
 #bg10
-app.register_blueprint(users.b.g10.bg10_40328242.bg10_40328245)
+app.register_blueprint(users.b.g10.bg10_40328245.bg10_40328245)
 app.register_blueprint(users.b.g10.bg10_40328242.bg10_40328242)
 app.register_blueprint(users.b.g10.bg10_40323241.bg10_40323241)
 app.register_blueprint(users.b.g10.bg10_40323222.bg10_40323222)
@@ -2056,9 +2057,9 @@ app.secret_key = 'A0Zr9@8j/3yX R~XHH!jmN]LWX/,?R@T'
 
 
 </t>
-<t tx="leo.20160526112129.1">@bg10_40328242.route('/threegears', defaults={'n1':17,'n2':29,'n3':15})
-@bg10_40328242.route('/threegears/&lt;n1&gt;/&lt;n2&gt;/&lt;n3&gt;')
-def draw_threegears(n1, n2, n3):
+<t tx="leo.20160526112129.1">@bg10_40328242.route('/threegears', defaults={'n1':17,'n2':29,'n3':15,'n4':22})
+@bg10_40328242.route('/threegears/&lt;n1&gt;/&lt;n2&gt;/&lt;n3&gt;/&lt;n4&gt;/')
+def draw_threegears(n1, n2, n3, n4):
     outstring='''
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -2166,18 +2167,18 @@ def spur(cx, cy, m, n, pa, theta):
 n1 = '''+str(n1)+'''
 n2 = '''+str(n2)+'''
 n3 = '''+str(n3)+'''
- 
+n4 = '''+str(n4)+'''
 # m 為模數, 根據畫布的寬度, 計算適合的模數大小
 # Module = mm of pitch diameter per tooth
 # 利用 80% 的畫布寬度進行繪圖
 # 計算模數的對應尺寸
-m = canvas.width*0.8/(n1+n2+n3)
+m = canvas.width*0.8/(n1+n2+n3+n4)
  
 # 根據齒數與模組計算各齒輪的節圓半徑
 pr1 = n1*m/2
 pr2 = n2*m/2
 pr3 = n3*m/2
- 
+pr4 = n4*m/2
 # 畫布左右兩側都保留畫布寬度的 10%
 # 依此計算對應的最左邊齒輪的軸心座標
 cx = canvas.width*0.1+pr1
@@ -2197,6 +2198,10 @@ spur(cx+pr1+pr2, cy, m, n2, pa, 180-180/n2)
 # 但是第2齒為了與第一齒囓合時, 已經從原始定位線轉了 180-180/n2 度
 # 而當第2齒從與第3齒囓合的定位線, 逆時鐘旋轉 180-180/n2 角度後, 原先囓合的第3齒必須要再配合旋轉 (180-180/n2 )*n2/n3
 spur(cx+pr1+pr2+pr2+pr3, cy, m, n3, pa, 180-180/n3+(180-180/n2)*n2/n3)
+
+spur(cx+pr1+pr2+pr2+pr3+pr3+pr4, cy, m, n4, pa, 180-180/n3*n3/n4+(180-180/n3)*n3/n4+(180-180/n2)*n2/n3*n3/n4)
+
+
 &lt;/script&gt;'''
     return outstring</t>
 <t tx="leo.20160603200054.1"></t>
