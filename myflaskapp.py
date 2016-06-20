@@ -56,6 +56,9 @@ import users.b.g10.bg10_40328245
 import users.b.g10.bg10_40328242
 import users.b.g10.bg10_40323241
 import users.b.g10.bg10_40323222
+import users.b.g10.bg10_40323243
+#bg6
+import users.b.g6.bg6_40323211
 #ag8
 #import users.a.g8.a40323143
 #import users.a.g8.a40323154
@@ -483,6 +486,9 @@ app.register_blueprint(users.b.g10.bg10_40328245.bg10_40328245)
 app.register_blueprint(users.b.g10.bg10_40328242.bg10_40328242)
 app.register_blueprint(users.b.g10.bg10_40323241.bg10_40323241)
 app.register_blueprint(users.b.g10.bg10_40323222.bg10_40323222)
+app.register_blueprint(users.b.g10.bg10_40323243.bg10_40323243)
+#bg6
+app.register_blueprint(users.b.g6.bg6_40323211.bg6_40323211)
 #ag8
 #app.register_blueprint(users.a.g8.a40323143.ag8_40323143)
 #app.register_blueprint(users.a.g8.a40323154.ag8_40323154)

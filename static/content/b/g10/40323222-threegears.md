@@ -6,7 +6,7 @@ Author: 40323222
 cdw11內容規畫 :  
 <!-- PELICAN_END_SUMMARY -->
 <h3>網際 2D 正齒輪傳動囓合繪圖</h3>
-<img src="http://i.imgur.com/Qe1UpZY.png">
+<img src="http://i.imgur.com/AK1P8Xu.png">
 <br/>
 <h2>心得</h2>
 <h3>操作後了解到齒輪嚙合需要許多條件來拘束，且齒輪大小.齒數也不能隨便配。</h3>
